@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entry</key>
+	<dict>
+		<key>cell</key>
+		<string>PSLinkCell</string>
+		<key>icon</key>
+		<string>/Applications/Preferences.app/icon-table@2x.png</string>
+		<key>label</key>
+		<string>Wake-On-LAN</string>
+	</dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.uroboro.activator.listener.wol</string>
+			<key>default</key>
+			<string>00:00:00:00:00:00</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>isIP</key>
+			<true/>
+			<key>key</key>
+			<string>macAddress</string>
+			<key>label</key>
+			<string>MAC address</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.uroboro.activator.listener.wol</string>
+			<key>default</key>
+			<string>192.168.0.255</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>isIP</key>
+			<true/>
+			<key>key</key>
+			<string>ipAddress</string>
+			<key>label</key>
+			<string>IP address</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.uroboro.activator.listener.wol</string>
+			<key>default</key>
+			<string>9</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>isNumeric</key>
+			<true/>
+			<key>key</key>
+			<string>port</string>
+			<key>label</key>
+			<string>Port</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Wake-On-LAN</string>
+</dict>
+</plist>
