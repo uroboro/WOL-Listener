@@ -8,3 +8,4 @@ Architecture: iphoneos-arm
 Depends: mobilesubstrate, libactivator
 Maintainer: uroboro <uroboro.845@gmail.com>
 Author: uroboro <uroboro.845@gmail.com>
+Depiction: http://uroboro.github.io/repo/?p=com.uroboro.activator.listener.wol

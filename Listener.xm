@@ -21,7 +21,7 @@ int DEFAULT_PORT = 9; // default port numbers: 7, 9
 - (id)objectForKey:(NSString *)key inDomain:(NSString *)domain;
 - (void)setObject:(id)value forKey:(NSString *)key inDomain:(NSString *)domain;
 @end
- 
+
 static NSString *nsDomainString = @"com.uroboro.activator.listener.wol";
 
 static int sendMagicPacket(char *mac_addr, char *ip_addr, int port);
@@ -111,7 +111,7 @@ static int sendPacket(char *ip_addr, int port_num, unsigned char packet[102]) {
 	}
 #if 0
 	// Wait for 0.5 seconds for the packet to be sent
-	struct timespec tspec = (struct timespec){0, 500000000};
+	struct timespec tspec = (struct timespec){ 0, 500000000 };
 	r = nanosleep(&tspec, NULL);
 	if (r < 0) {
 		fprintf(stderr, "#! nanosleep() failed\n");
@@ -171,9 +171,8 @@ static int sendPacket(char *ip_addr, int port_num, unsigned char packet[102]) {
 	int port = (n)? [n intValue]:DEFAULT_PORT;
 
 #if 0
-#define SHOWALERT(t, m) [[UIAlertView alloc] initWithTitle:(t) message:(m) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]
-s = [NSString stringWithFormat:@"%s; %s:%d", mac_addr, ip_addr, port];
-UIAlertView *a = SHOWALERT(nil, s); [a show]; [a release];
+#define SHOWALERT(t, m) [[[[UIAlertView alloc] initWithTitle:(t) message:(m) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]
+	SHOWALERT(nil, [NSString stringWithFormat:@"%s; %s:%d", mac_addr, ip_addr, port]);
 #endif
 	int r = sendMagicPacket(mac_addr, ip_addr, port);
 
@@ -206,4 +205,3 @@ UIAlertView *a = SHOWALERT(nil, s); [a show]; [a release];
 }
 */
 @end
-
